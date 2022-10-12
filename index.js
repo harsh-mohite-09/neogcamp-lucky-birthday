@@ -3,18 +3,15 @@ const luckyNumber = document.querySelector("#lucky-number");
 const checkButton = document.querySelector("#check-button");
 const message = document.querySelector("#output");
 
-const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
-
-hideMessage();
 checkButton.addEventListener("click", clickHandler);
 
 function clickHandler() {
   const newDate = dateOfBirth.value.replaceAll("-", "");
-  var compareNumber = 0;
+  var sum = 0;
   for (i = 0; i < newDate.length; i++) {
-    compareNumber = compareNumber + ~~newDate.charAt(i);
+    sum = sum + ~~newDate.charAt(i);
   }
-  if (compareNumber == ~~luckyNumber.value) {
+  if (sum % ~~luckyNumber.value === 0) {
     showMessageTrue("YaY! You have a lucky birthday! 🥳🥳🥳");
   } else {
     showMessageFalse("Sorry! Your birthday is not lucky.");
