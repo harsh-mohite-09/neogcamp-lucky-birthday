@@ -14,10 +14,10 @@
         Enter the details as below to know if your Birthday is Lucky!
       </p>
       <label for="dob" class="label">Date of Birth: </label>
-      <input id="dob" class="input" type="date" />
+      <input id="dob" class="input" type="date" required />
       <label for="lucky-number" class="label">Lucky Number: </label>
-      <input id="lucky-number" class="input" type="number" />
-      <button id="check-button">Check</button>
+      <input id="lucky-number" class="input" type="number" min="1" required />
+      <button id="check-button" type="submit">Check</button>
       <p id="output"></p>
       <p class="privacy-note">
         <b>Privacy Note:</b> We are not storing your data.

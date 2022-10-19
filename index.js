@@ -11,14 +11,17 @@ function clickHandler() {
   for (i = 0; i < newDate.length; i++) {
     sum = sum + ~~newDate.charAt(i);
   }
-  if (sum % ~~luckyNumber.value === 0) {
-    showMessageTrue("YaY! You have a lucky birthday! 🥳🥳🥳");
+
+  if (~~luckyNumber.value > 0) {
+    if (sum % ~~luckyNumber.value === 0) {
+      showMessageTrue("YaY! You have a lucky birthday! 🥳🥳🥳");
+    } else {
+      showMessageFalse("Sorry! Your birthday is not lucky.");
+    }
   } else {
-    showMessageFalse("Sorry! Your birthday is not lucky.");
+    alert("Please enter positive numbers only!");
   }
 }
-
-function calculateLucky(number) {}
 
 function hideMessage() {
   message.style.display = "none";
