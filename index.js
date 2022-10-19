@@ -19,7 +19,7 @@ function clickHandler() {
       showMessageFalse("Sorry! Your birthday is not lucky.");
     }
   } else {
-    alert("Please enter positive numbers only!");
+    showMessageFalse("Please enter positive numbers only!");
   }
 }
 

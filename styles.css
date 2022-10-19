@@ -49,6 +49,7 @@ p {
 
 #output {
   font-weight: 700;
+  font-size: 2em;
 }
 
 .footer-container {
@@ -81,4 +82,9 @@ hr {
   bottom: 130px;
   left: 0;
   right: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
