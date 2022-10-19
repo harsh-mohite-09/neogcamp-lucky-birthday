@@ -12,14 +12,14 @@ function clickHandler() {
     sum = sum + ~~newDate.charAt(i);
   }
 
-  if (~~luckyNumber.value > 0) {
+  if (~~luckyNumber.value > 0 && dateOfBirth.value != "") {
     if (sum % ~~luckyNumber.value === 0) {
       showMessageTrue("YaY! You have a lucky birthday! 🥳🥳🥳");
     } else {
       showMessageFalse("Sorry! Your birthday is not lucky.");
     }
   } else {
-    showMessageFalse("Please enter positive numbers only!");
+    showMessageFalse("Please enter valid inputs!");
   }
 }
 
